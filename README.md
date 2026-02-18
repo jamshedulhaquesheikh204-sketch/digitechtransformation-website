@@ -1,5 +1,18 @@
 # DigiTech Transformation Website
 
+**Developer:** Junaid Ul Haque Sheikh
+**Contact:** +92 332 3605926 | +92 334 3046525
+**Email:** junaidsheikh0002@gmail.com
+
+## Live Deployment Links
+
+- **Main Domain:** [https://digitechtransformation.com/](https://digitechtransformation.com/)
+- **Vercel:** [https://digitechtransformation.vercel.app](https://digitechtransformation.vercel.app)
+- **Netlify:** [https://digitechtransformation.netlify.app](https://digitechtransformation.netlify.app)
+- **GitHub:** [https://github.com/junaidsheikh0002/junaidulhaquesheikh0001](https://github.com/junaidsheikh0002/junaidulhaquesheikh0001)
+
+---
+
 A modern, responsive e-commerce enabled website for DigiTech Transformation - Pakistan's leading digital skills institute.
 
 ## Features
