@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(git remote:*)",
+      "Bash(gh auth status:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh auth login:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npx netlify-cli:*)",
+      "Bash(npx vercel --yes --prod)",
+      "Bash(start cmd:*)",
+      "Bash(powershell:*)",
+      "Bash(start https://app.netlify.com/drop)",
+      "Bash(explorer:*)",
+      "Bash(start \"\" \"D:\\\\Digitech_Transformation_Websites_0001\")",
+      "Bash(curl:*)",
+      "Bash(findstr:*)",
+      "Bash(start:*)",
+      "Bash(npx netlify deploy:*)",
+      "Bash(npx surge:*)"
+    ]
+  }
+}
