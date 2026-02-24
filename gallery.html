@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - DigiTech Transformation</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .gallery-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .gallery-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-caption {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .gallery-item-caption h3 {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-item-caption p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .back-to-home {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .back-to-home .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-hero h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>DigiTech <span class="highlight">Transformation</span></span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="counselling.html">Counselling</a></li>
+                <li><a href="digital-marketing-agency.html">Digital Marketing Agency</a></li>
+                <li><a href="csr.html">CSR</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="index.html#contact" class="btn btn-primary">Enroll Now</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Capturing moments of learning, growth, and success</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/641339874_122172102980868432_2214603036489146028_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEzKHSUUxIi75sUUAg06q3ySbXkqS8eWvdJteSpLx5a9-2NLUM3abasgn6jilYglvgPikBqIkcOZo7siZ1LT5xh&_nc_ohc=_pJ_qUU73YgQ7kNvwHBXf7r&_nc_oc=AdnnyWW-ku0A-zCxbnlD0hDjw7c8hrIiNBKTglwoFV5qwaw4dTLb1Wx8PuRNZraCnh8&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=PMtE6cLI54QQCRhgFh2wqw&oh=00_AfvbXHaW6fJHQIWa30_-wvcULdt1zXdYBPF5x9V8y3is8Q&oe=69A219F6" alt="DigiTech Transformation Event">
+                    <div class="gallery-item-caption">
+                        <h3>DigiTech Transformation Event</h3>
+                        <p>Empowering students with digital skills</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-2.fna.fbcdn.net/v/t39.30808-6/640059429_122171817098868432_5178230762912461307_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHhrPPdhI3TUxnF_bZ8uVOtS5a7BXoqc0RLlrsFeipzRM37vghrjfFwvEeT54F8DQqzFnND7pN2rI2zGsDx9a2u&_nc_ohc=s1izhOM4xhwQ7kNvwFAQLFk&_nc_oc=Adng4TymjnDYYjqO-LUZ4FAuE1Uxw1VYfYFGEpEMnSCP92pCwMUdzClXwp1R-gD14QI&_nc_zt=23&_nc_ht=scontent.fkhi16-2.fna&_nc_gid=kV4teQ41BhYrWFmvo0fEKQ&oh=00_AfuSTuJ8dznPJURMEDIGVVgQwXJSSNJFgj9HUhyneKbjKw&oe=69A22267" alt="Students Learning">
+                    <div class="gallery-item-caption">
+                        <h3>Students Learning</h3>
+                        <p>Building skills for the future</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/640313801_122171817008868432_5717819675186418139_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeE2U3zP4nUfb3Vd-OIVmxUZoG0dAC5wtNOgbR0ALnC00xAIPOvfskxRTXzsvm48xnc__ap7b-J_47UYFl-xML-S&_nc_ohc=fSYuh7nsdAEQ7kNvwHIektk&_nc_oc=AdmO0SZvIbgbeSpMDkcOy4Ltg9QWxhEUxxFf6VCGfDVbzQ0tQOozweSaDRI9vcrHkxU&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=0TKZB-wV_3zzLyXZanEBcg&oh=00_Aft0O25g-WCIHO0C4oG8AESeN5wME0Fy9sEyHVQx2fyxeA&oe=69A2222E" alt="Students Studying">
+                    <div class="gallery-item-caption">
+                        <h3>Students Studying</h3>
+                        <p>Dedicated learners in action</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img src="images/501253488_122114079098868432_4425891057299274538_n.jpg" alt="Coworking Space">
+                    <div class="gallery-item-caption">
+                        <h3>Coworking Space</h3>
+                        <p>Jofa Tower, Karachi</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img src="https://cdn.klasio.com/1001034/8693/conversions/Blank-1-Panel-Landscape-Comic-Strip-featured.png" alt="Web Development with Python">
+                    <div class="gallery-item-caption">
+                        <h3>Web Development with Python</h3>
+                        <p>Cohort 1 - AI Technologies</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img src="https://cdn.klasio.com/1001034/8695/conversions/Blank-1-Panel-Landscape-Comic-Strip-(1)-featured.png" alt="Media Production with AI">
+                    <div class="gallery-item-caption">
+                        <h3>Media Production with AI</h3>
+                        <p>Cohort 1 - AI Technologies</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <img src="https://cdn.klasio.com/1001034/8697/conversions/Blank-1-Panel-Landscape-Comic-Strip-(3)-featured.png" alt="Computer Graphics & Video Editing">
+                    <div class="gallery-item-caption">
+                        <h3>Computer Graphics & Video Editing</h3>
+                        <p>Cohort 1 - AI Technologies</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <img src="https://cdn.klasio.com/1001034/7266/conversions/WhatsApp-Image-2025-12-23-at-6.39.54-PM-(1)-featured.jpeg" alt="Speech Language Pathology">
+                    <div class="gallery-item-caption">
+                        <h3>Speech Language Pathology</h3>
+                        <p>Cohort 2 - International Certification</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item">
+                    <img src="images/636171682_122171100020868432_4897636850084145732_n.jpg" alt="Live Projects">
+                    <div class="gallery-item-caption">
+                        <h3>Live Projects</h3>
+                        <p>Real-world student projects</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-2.fna.fbcdn.net/v/t39.30808-6/640059622_122171743226868432_4757388825984191527_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHPJWta_LLkkSergO5B97vRzHBJ27rmYRfMcEnbuuZhF0JiykAyzrLCR9gwzA9YnnqRIegNDhMe_haz_lYmYe0M&_nc_ohc=aCbG5C26EegQ7kNvwF-bY8k&_nc_oc=Adnxw5e_3uLphFfB9rq_jwhwiW5yZuEjT7T-KtNdhPGA3I2mVcrHvaM8xOImOZkKeUs&_nc_zt=23&_nc_ht=scontent.fkhi16-2.fna&_nc_gid=3gjDdHgyz7uQITa4vNd-Wg&oh=00_AfuAQhNHaIkbEKHiir0kXj2obu8FckEf6Z5U7cWncXXQ3w&oe=69A24450" alt="Skill Development Council Canada">
+                    <div class="gallery-item-caption">
+                        <h3>Skill Development Council Canada</h3>
+                        <p>DigiTech Transformation Training & Consulting</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/640312662_122171743208868432_193878086363061748_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeElCLNsk-FRXlwbod5LKI3M8m_MAde-5E_yb8wB177kT4FfDld1vi_ulg6HBPdKZHQKo_BR_r6dk0rRsRRAFBlI&_nc_ohc=iyYbhyBX9GoQ7kNvwG-Lc2b&_nc_oc=AdlXaEQjHscgKvyK-Yel3-C-vYt3YlWoAlBdCE87LAgBhkTqzskXgEmeiMbAsOcV42U&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=-EGsngiG7F8u02f26rxJ7A&oh=00_AftXGHJqnDek8BrfTmKZR9pXck_duUaIPYBN3oZQOxwoCA&oe=69A254C1" alt="Skill Development Council Canada Event">
+                    <div class="gallery-item-caption">
+                        <h3>Skill Development Council Canada</h3>
+                        <p>DigiTech Transformation Training & Coworking</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/641310545_122171743172868432_4039278168840636515_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEB9b2AsVgN9aEt7CM8UAlrUyFx7QX_qk1TIXHtBf-qTYJk9tCqoSjlqIpRMS0A9-2st9vI1C3O3bodNANUduYz&_nc_ohc=ccNDykh0dh0Q7kNvwE2RUP7&_nc_oc=Adkrb6XLguZt9xB05VeSZgw8hcACpjdZBhY5IcA_ISwgRP2OCv-et6UlouEGy9SYat8&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=WCUBjnlPMt7qJ14KMuKCWA&oh=00_Afs46JLvTt10qYbL7vQA4uvb-ArlHOKC941Sx7JYuSMTcQ&oe=69A25B27" alt="DigiTech Transformation">
+                    <div class="gallery-item-caption">
+                        <h3>DigiTech Transformation</h3>
+                        <p>Empowering digital skills</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/641078032_122171743112868432_2375003023964913785_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEF3GD-lRw3Jr4eyfaQWph17gKE8hGMI_7uAoTyEYwj_o2q3sEIYEzoyTFLtY3Z4ALH3TOxGtb-E0H-8XWVaTH8&_nc_ohc=HO0gI5Uzfk8Q7kNvwFVAImQ&_nc_oc=AdmNIAmov1-Ze5AyDKpAv4V_YXMeZdcMyMCnQh6jLnDMchDF_uVzdkZixwAHWQTm5TA&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=pIXyhjW4uHnMXxnCwmaMdw&oh=00_AfuAM1cB5in03T6d-1G9JRstPNGQyAmTAkm3rZmRKB5RFg&oe=69A22DF5" alt="Skill Development Council Canada">
+                    <div class="gallery-item-caption">
+                        <h3>Skill Development Council Canada</h3>
+                        <p>DigiTech Transformation - Training, Coworking & Consulting</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-2.fna.fbcdn.net/v/t39.30808-6/640036872_122171743064868432_1514154162429281238_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHCHvM_thSWEdr-xlxN_mSzdUICa-i7Whp1QgJr6LtaGkkCawb753ITFZ_WcHaBIJEwvifA-u7TlXnNVPp9seI2&_nc_ohc=96DprxC04NMQ7kNvwHLlLmD&_nc_oc=AdkoJLjTUd_DOL70uYf1OOmCgboZONpCGYwfWSm5OBs7lBklSar4_MN01LkryDBp0Xo&_nc_zt=23&_nc_ht=scontent.fkhi16-2.fna&_nc_gid=sRmq9sgcToX_mFzjHQjmdw&oh=00_Afu1gZlofEg6-TjCYQybzJQIGGBPaSne7CLzpVr7_InE9g&oe=69A23A17" alt="DigiTech Transformation Event">
+                    <div class="gallery-item-caption">
+                        <h3>DigiTech Transformation</h3>
+                        <p>Building digital future</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 13 -->
+                <div class="gallery-item">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/640043058_122171743040868432_4580859264664532714_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEDFeE4iofKqylTfduPxVGVa_8I5VNRrHpr_wjlU1GsegM_OP2UBc2_hgFClYJLU2Zr-S_MJ6hRp4X0jrn5qysj&_nc_ohc=1RaOLsR47BQQ7kNvwFin9PJ&_nc_oc=AdngRFllcB8i3gkenN4Uz3RnKlA2rjcLhFaytv-k_BqKOhYA9bUA-HhPy4HcSn8HuJM&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=eYWIcQy5BZFq2UDImp3eTQ&oh=00_AfvDir99PNiWUIvzFPBdKUiGYZpnW6OC1e7DXR3RnW338Q&oe=69A22C05" alt="DigiTech Transformation Training">
+                    <div class="gallery-item-caption">
+                        <h3>DigiTech Transformation</h3>
+                        <p>Skills for the future</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 14 -->
+                <div class="gallery-item">
+                    <img src="images/274926607_493297922158133_8266671877901625104_n.jpg" alt="DigiTech Event">
+                    <div class="gallery-item-caption">
+                        <h3>DigiTech Event</h3>
+                        <p>Community gathering</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 15 -->
+                <div class="gallery-item">
+                    <img src="images/499253982_122110129904868432_3820918677093200685_n.jpg" alt="Students Workshop">
+                    <div class="gallery-item-caption">
+                        <h3>Students Workshop</h3>
+                        <p>Hands-on learning session</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 16 -->
+                <div class="gallery-item">
+                    <img src="images/499595111_122110130486868432_2279439053129676219_n.png" alt="Digital Skills Training">
+                    <div class="gallery-item-caption">
+                        <h3>Digital Skills Training</h3>
+                        <p>Building future leaders</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 17 -->
+                <div class="gallery-item">
+                    <img src="images/608519211_122161485104868432_7577146498186475659_n.jpg" alt="Campus Life">
+                    <div class="gallery-item-caption">
+                        <h3>Campus Life</h3>
+                        <p>Student activities</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 18 -->
+                <div class="gallery-item">
+                    <img src="images/608575910_122161485176868432_4251500319826274738_n.jpg" alt="Learning Environment">
+                    <div class="gallery-item-caption">
+                        <h3>Learning Environment</h3>
+                        <p>Modern facilities</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 19 -->
+                <div class="gallery-item">
+                    <img src="images/608906175_122161485068868432_2589221267199616805_n.jpg" alt="Student Collaboration">
+                    <div class="gallery-item-caption">
+                        <h3>Student Collaboration</h3>
+                        <p>Teamwork and innovation</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 20 -->
+                <div class="gallery-item">
+                    <img src="images/609033434_122161485098868432_5787264842048140037_n.jpg" alt="Tech Training">
+                    <div class="gallery-item-caption">
+                        <h3>Tech Training</h3>
+                        <p>Advanced technology skills</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 21 -->
+                <div class="gallery-item">
+                    <img src="images/610623044_122161485140868432_3339948982211008211_n.jpg" alt="Graduation Ceremony">
+                    <div class="gallery-item-caption">
+                        <h3>Graduation Ceremony</h3>
+                        <p>Celebrating success</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 22 -->
+                <div class="gallery-item">
+                    <img src="images/629323695_122168926742868432_3293495538368086957_n.jpg" alt="Career Development">
+                    <div class="gallery-item-caption">
+                        <h3>Career Development</h3>
+                        <p>Professional growth</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 23 -->
+                <div class="gallery-item">
+                    <img src="images/629338301_122168926058868432_5346364004646885069_n.jpg" alt="Industry Experts">
+                    <div class="gallery-item-caption">
+                        <h3>Industry Experts</h3>
+                        <p>Learning from professionals</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 24 -->
+                <div class="gallery-item">
+                    <img src="images/629340253_122168926472868432_6393913786374480418_n.jpg" alt="Networking Event">
+                    <div class="gallery-item-caption">
+                        <h3>Networking Event</h3>
+                        <p>Building connections</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 25 -->
+                <div class="gallery-item">
+                    <img src="images/635744251_122171099120868432_4877738663447525181_n.jpg" alt="Innovation Hub">
+                    <div class="gallery-item-caption">
+                        <h3>Innovation Hub</h3>
+                        <p>Creative workspace</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 26 -->
+                <div class="gallery-item">
+                    <img src="images/636098075_122171099066868432_1553483352854573752_n.jpg" alt="Student Projects">
+                    <div class="gallery-item-caption">
+                        <h3>Student Projects</h3>
+                        <p>Showcasing talent</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 27 -->
+                <div class="gallery-item">
+                    <img src="images/636663110_122171099098868432_6959133070986712364_n.jpg" alt="Tech Workshop">
+                    <div class="gallery-item-caption">
+                        <h3>Tech Workshop</h3>
+                        <p>Hands-on experience</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 28 -->
+                <div class="gallery-item">
+                    <img src="images/636669470_122171099000868432_8786339662523166275_n.jpg" alt="Digital Marketing">
+                    <div class="gallery-item-caption">
+                        <h3>Digital Marketing</h3>
+                        <p>Modern marketing strategies</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 29 -->
+                <div class="gallery-item">
+                    <img src="images/636681279_122171113838868432_3226519696749442642_n.jpg" alt="AI & Machine Learning">
+                    <div class="gallery-item-caption">
+                        <h3>AI & Machine Learning</h3>
+                        <p>Cutting-edge technology</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 30 -->
+                <div class="gallery-item">
+                    <img src="images/637417452_122171099090868432_2768676822730874559_n.jpg" alt="Entrepreneurship">
+                    <div class="gallery-item-caption">
+                        <h3>Entrepreneurship</h3>
+                        <p>Building startups</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 31 -->
+                <div class="gallery-item">
+                    <img src="images/637495540_122171100038868432_2590639003585552919_n.jpg" alt="Code Camp">
+                    <div class="gallery-item-caption">
+                        <h3>Code Camp</h3>
+                        <p>Programming bootcamp</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 32 -->
+                <div class="gallery-item">
+                    <img src="images/637644846_122171262632868432_4650788112791724357_n.jpg" alt="Design Thinking">
+                    <div class="gallery-item-caption">
+                        <h3>Design Thinking</h3>
+                        <p>Creative problem solving</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 33 -->
+                <div class="gallery-item">
+                    <img src="images/638006965_122171099996868432_1920477552427040754_n.jpg" alt="Mentorship Program">
+                    <div class="gallery-item-caption">
+                        <h3>Mentorship Program</h3>
+                        <p>Guided learning</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 34 -->
+                <div class="gallery-item">
+                    <img src="images/638029946_122171262770868432_2977540668917156438_n.jpg" alt="Skill Development">
+                    <div class="gallery-item-caption">
+                        <h3>Skill Development</h3>
+                        <p>Continuous learning</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 35 -->
+                <div class="gallery-item">
+                    <img src="images/638035858_122171099174868432_6994050964066776200_n.jpg" alt="Team Building">
+                    <div class="gallery-item-caption">
+                        <h3>Team Building</h3>
+                        <p>Collaborative activities</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 36 -->
+                <div class="gallery-item">
+                    <img src="images/638055748_122171262674868432_2901823652749086515_n.jpg" alt="Presentation Skills">
+                    <div class="gallery-item-caption">
+                        <h3>Presentation Skills</h3>
+                        <p>Public speaking training</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 37 -->
+                <div class="gallery-item">
+                    <img src="images/638232899_122171262668868432_3111084298890015528_n.jpg" alt="Cloud Computing">
+                    <div class="gallery-item-caption">
+                        <h3>Cloud Computing</h3>
+                        <p>Modern infrastructure</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 38 -->
+                <div class="gallery-item">
+                    <img src="images/638257635_122171262650868432_3101061441193370229_n.jpg" alt="Cybersecurity">
+                    <div class="gallery-item-caption">
+                        <h3>Cybersecurity</h3>
+                        <p>Protecting digital assets</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 39 -->
+                <div class="gallery-item">
+                    <img src="images/638366782_122171100170868432_7281371355356477911_n.jpg" alt="Data Science">
+                    <div class="gallery-item-caption">
+                        <h3>Data Science</h3>
+                        <p>Analytics and insights</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 40 -->
+                <div class="gallery-item">
+                    <img src="images/640326678_122171742872868432_854629474189452238_n.jpg" alt="Mobile App Development">
+                    <div class="gallery-item-caption">
+                        <h3>Mobile App Development</h3>
+                        <p>iOS & Android apps</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 41 -->
+                <div class="gallery-item">
+                    <img src="images/640338083_122171743304868432_668341792587550938_n.jpg" alt="UI/UX Design">
+                    <div class="gallery-item-caption">
+                        <h3>UI/UX Design</h3>
+                        <p>User-centered design</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 42 -->
+                <div class="gallery-item">
+                    <img src="images/640360492_122171742902868432_6279800429047645664_n.jpg" alt="Blockchain Technology">
+                    <div class="gallery-item-caption">
+                        <h3>Blockchain Technology</h3>
+                        <p>Decentralized solutions</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 43 -->
+                <div class="gallery-item">
+                    <img src="images/640998804_122171742986868432_6977149580950832929_n.jpg" alt="IoT Solutions">
+                    <div class="gallery-item-caption">
+                        <h3>IoT Solutions</h3>
+                        <p>Connected devices</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 44 -->
+                <div class="gallery-item">
+                    <img src="images/641078032_122171817026868432_2401357055958262780_n.jpg" alt="Robotics">
+                    <div class="gallery-item-caption">
+                        <h3>Robotics</h3>
+                        <p>Automation and AI</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 45 -->
+                <div class="gallery-item">
+                    <img src="images/641532255_122171817080868432_6759564885154560505_n.jpg" alt="Virtual Reality">
+                    <div class="gallery-item-caption">
+                        <h3>Virtual Reality</h3>
+                        <p>Immersive experiences</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 46 -->
+                <div class="gallery-item">
+                    <img src="images/lms-digite-banner-1.jpg" alt="LMS Platform">
+                    <div class="gallery-item-caption">
+                        <h3>LMS Platform</h3>
+                        <p>Online learning system</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-to-home">
+                <a href="index.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>DigiTech <span class="highlight">Transformation</span></span>
+                    </a>
+                    <p>Empowering the next generation of digital entrepreneurs and professionals.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100064065330176" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@JunaidUlHaqueSheikh-g3z" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@junaid.ul.haque.s65" target="_blank" rel="noopener" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio" target="_blank" rel="noopener" class="social-link"><i class="fab fa-fiverr"></i></a>
+                        <a href="https://www.facebook.com/groups/958910999994384" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html">Web Development with Python</a></li>
+                        <li><a href="programs.html">Media Production with AI</a></li>
+                        <li><a href="programs.html">Computer Graphics &amp; Video Editing</a></li>
+                        <li><a href="programs.html">Speech Language Pathology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Shaheed Makdhoom Bilawal Society, Near Safoora Chowrangi, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 335 9033554 / +92 334 3046525</li>
+                        <li><i class="fas fa-phone"></i> +92 332 3605926 / +92 332 0213589</li>
+                        <li><i class="fas fa-envelope"></i> digitechtransformation@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DigiTech Transformation. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/923359033554" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

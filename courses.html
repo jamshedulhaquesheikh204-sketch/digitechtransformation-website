@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - DigiTech Transformation</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .courses-hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .courses-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .courses-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .courses-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-card-image {
+            height: 200px;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .course-card-image i {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .course-card-content {
+            padding: 1.5rem;
+        }
+
+        .course-card-content h3 {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+        }
+
+        .course-card-content p {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #475569;
+        }
+
+        .course-meta i {
+            color: #2563eb;
+        }
+
+        .course-card-content .btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .categories-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .category-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .category-card i {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .category-card h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-card p {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .courses-hero h1 {
+                font-size: 2rem;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>DigiTech <span class="highlight">Transformation</span></span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="counselling.html">Counselling</a></li>
+                <li><a href="digital-marketing-agency.html">Digital Marketing Agency</a></li>
+                <li><a href="csr.html">CSR</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary">Enroll Now</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Courses Hero -->
+    <section class="courses-hero">
+        <div class="container">
+            <h1>Our Courses</h1>
+            <p>Industry-leading programs designed for your success</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Web Development with Python</h3>
+                        <p>Master full-stack web development using Python, Django, Flask, and modern frontend technologies.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 6 Months</span>
+                            <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                        </div>
+                        <a href="programs.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Media Production with AI</h3>
+                        <p>Learn to create stunning media content using artificial intelligence tools and techniques.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 4 Months</span>
+                            <span><i class="fas fa-signal"></i> Intermediate</span>
+                        </div>
+                        <a href="programs.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Computer Graphics & Video Editing</h3>
+                        <p>Create professional graphics and edit videos using industry-standard software and AI tools.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 4 Months</span>
+                            <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                        </div>
+                        <a href="programs.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Speech Language Pathology</h3>
+                        <p>International certification program in speech therapy and language disorders.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 12 Months</span>
+                            <span><i class="fas fa-signal"></i> Professional</span>
+                        </div>
+                        <a href="programs.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Ecommerce Mastery</h3>
+                        <p>Build and scale successful online stores with proven strategies and tools.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 3 Months</span>
+                            <span><i class="fas fa-signal"></i> All Levels</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Digital Marketing & Content Creation</h3>
+                        <p>Master social media marketing, content strategy, and brand building online.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 4 Months</span>
+                            <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 7 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Freelancing & Personal Branding</h3>
+                        <p>Build your freelance career and establish a strong personal brand online.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 3 Months</span>
+                            <span><i class="fas fa-signal"></i> All Levels</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 8 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Mobile App Development</h3>
+                        <p>Learn to build iOS and Android apps using Flutter and React Native.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 6 Months</span>
+                            <span><i class="fas fa-signal"></i> Intermediate</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Course 9 -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="course-card-content">
+                        <h3>Cybersecurity Fundamentals</h3>
+                        <p>Protect digital assets and learn ethical hacking and security best practices.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 5 Months</span>
+                            <span><i class="fas fa-signal"></i> Intermediate</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #1e293b; margin-bottom: 1rem;">Course Categories</h2>
+            <p style="text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 2rem;">Explore our diverse range of courses designed to help you succeed in the digital economy</p>
+            <div class="category-grid">
+                <div class="category-card">
+                    <i class="fas fa-code"></i>
+                    <h4>Development</h4>
+                    <p>Web, Mobile & Software</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Design</h4>
+                    <p>Graphics & UI/UX</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Marketing</h4>
+                    <p>Digital & Social Media</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-video"></i>
+                    <h4>Media</h4>
+                    <p>Video & Content Creation</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>AI & Tech</h4>
+                    <p>Artificial Intelligence</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Business</h4>
+                    <p>Entrepreneurship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>DigiTech <span class="highlight">Transformation</span></span>
+                    </a>
+                    <p>Empowering the next generation of digital entrepreneurs and professionals.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100064065330176" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@JunaidUlHaqueSheikh-g3z" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@junaid.ul.haque.s65" target="_blank" rel="noopener" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio" target="_blank" rel="noopener" class="social-link"><i class="fab fa-fiverr"></i></a>
+                        <a href="https://www.facebook.com/groups/958910999994384" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="incubation.html">Incubation</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html">Web Development with Python</a></li>
+                        <li><a href="programs.html">Media Production with AI</a></li>
+                        <li><a href="programs.html">Computer Graphics & Video Editing</a></li>
+                        <li><a href="programs.html">Speech Language Pathology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Shaheed Makdhoom Bilawal Society, Near Safoora Chowrangi, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 335 9033554 / +92 334 3046525</li>
+                        <li><i class="fas fa-phone"></i> +92 332 3605926 / +92 332 0213589</li>
+                        <li><i class="fas fa-phone"></i> +92 337 2135310 / +92 336 8068664</li>
+                        <li><i class="fas fa-envelope"></i> digitechtransformation@gmail.com</li>
+                        <li><i class="far fa-clock"></i> Mon-Sat: 9AM - 8PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DigiTech Transformation. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/923359033554" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

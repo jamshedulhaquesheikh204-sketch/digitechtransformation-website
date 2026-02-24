@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - DigiTech Transformation</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Shop Page Styles */
+        .shop-hero {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shop-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .shop-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .shop-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Products Section */
+        .shop-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .shop-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #ef4444;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-wishlist {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .product-wishlist:hover {
+            background: #ef4444;
+            color: white;
+        }
+
+        .product-wishlist.active {
+            background: #ef4444;
+            color: white;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-category {
+            color: #2563eb;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-rating .stars {
+            color: #fbbf24;
+        }
+
+        .product-rating .count {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-current {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .price-original {
+            font-size: 1rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn-add-to-cart {
+            flex: 1;
+            padding: 0.875rem 1.5rem;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-quick-view {
+            width: 48px;
+            height: 48px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-quick-view:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Cart Sidebar */
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            max-width: 100%;
+            height: 100vh;
+            background: white;
+            z-index: 9999;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h3 {
+            font-size: 1.25rem;
+            color: #1e293b;
+        }
+
+        .cart-close {
+            width: 40px;
+            height: 40px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .cart-close:hover {
+            background: #ef4444;
+            color: white;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-price {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .qty-btn:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .cart-item-remove {
+            color: #ef4444;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 3rem;
+            color: #94a3b8;
+        }
+
+        .cart-empty i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            background: #f8fafc;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .btn-checkout {
+            width: 100%;
+            padding: 1rem;
+            background: #25d366;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-checkout:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+        }
+
+        /* Cart Icon in Nav */
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.25rem;
+            padding: 0.5rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1e293b;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            z-index: 10000;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .toast.success {
+            background: #22c55e;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .shop-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>DigiTech <span class="highlight">Transformation</span></span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="counselling.html">Counselling</a></li>
+                <li><a href="digital-marketing-agency.html">Digital Marketing Agency</a></li>
+                <li><a href="csr.html">CSR</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <h1>Our Shop</h1>
+            <p>Premium digital services and courses to transform your career</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="shop-section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="shop-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="courses">Courses</button>
+                <button class="filter-btn" data-filter="services">Services</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="services">
+                    <div class="product-image-wrapper">
+                        <img src="images/lms-digite-banner-1.jpg" alt="E-commerce Website Package" class="product-image">
+                        <span class="product-badge">Best Seller</span>
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Services</div>
+                        <h3 class="product-title">Professional E-commerce Website Package</h3>
+                        <p class="product-description">Complete e-commerce website with payment integration, product management, and responsive design.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="count">(48 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 49,999</span>
+                            <span class="price-original">Rs. 79,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="1" data-name="Professional E-commerce Website Package" data-price="49999" data-image="images/lms-digite-banner-1.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="services">
+                    <div class="product-image-wrapper">
+                        <img src="images/637495540_122171100038868432_2590639003585552919_n.jpg" alt="Digital Marketing Package" class="product-image">
+                        <span class="product-badge">Popular</span>
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Services</div>
+                        <h3 class="product-title">Digital Marketing Service Package</h3>
+                        <p class="product-description">Complete digital marketing solution including SEO, social media management, and PPC campaigns.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="count">(62 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 29,999</span>
+                            <span class="price-original">Rs. 49,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="2" data-name="Digital Marketing Service Package" data-price="29999" data-image="images/637495540_122171100038868432_2590639003585552919_n.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="courses">
+                    <div class="product-image-wrapper">
+                        <img src="images/636171682_122171100020868432_4897636850084145732_n.jpg" alt="Web Development Course" class="product-image">
+                        <span class="product-badge">New</span>
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Courses</div>
+                        <h3 class="product-title">Complete Web Development Course</h3>
+                        <p class="product-description">Learn HTML, CSS, JavaScript, Python, and modern frameworks. Build real-world projects.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="count">(156 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 19,999</span>
+                            <span class="price-original">Rs. 34,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="3" data-name="Complete Web Development Course" data-price="19999" data-image="images/636171682_122171100020868432_4897636850084145732_n.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="design">
+                    <div class="product-image-wrapper">
+                        <img src="images/638006965_122171099996868432_1920477552427040754_n.jpg" alt="Logo Design Package" class="product-image">
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Design</div>
+                        <h3 class="product-title">Professional Logo Design Package</h3>
+                        <p class="product-description">Custom logo design with multiple concepts, unlimited revisions, and all file formats.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="count">(89 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 9,999</span>
+                            <span class="price-original">Rs. 19,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="4" data-name="Professional Logo Design Package" data-price="9999" data-image="images/638006965_122171099996868432_1920477552427040754_n.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="services">
+                    <div class="product-image-wrapper">
+                        <img src="images/638232899_122171262668868432_3111084298890015528_n.jpg" alt="SEO Optimization" class="product-image">
+                        <span class="product-badge">Hot</span>
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Services</div>
+                        <h3 class="product-title">SEO Optimization Service</h3>
+                        <p class="product-description">Boost your website rankings with our comprehensive SEO optimization service.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="count">(74 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 24,999</span>
+                            <span class="price-original">Rs. 39,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="5" data-name="SEO Optimization Service" data-price="24999" data-image="images/638232899_122171262668868432_3111084298890015528_n.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="courses">
+                    <div class="product-image-wrapper">
+                        <img src="images/640059429_122171817098868432_5178230762912461307_n.jpg" alt="Graphic Design Course" class="product-image">
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Courses</div>
+                        <h3 class="product-title">Graphic Design Masterclass</h3>
+                        <p class="product-description">Master Adobe Photoshop, Illustrator, and modern design principles with AI tools.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="count">(112 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 14,999</span>
+                            <span class="price-original">Rs. 24,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="6" data-name="Graphic Design Masterclass" data-price="14999" data-image="images/640059429_122171817098868432_5178230762912461307_n.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="courses">
+                    <div class="product-image-wrapper">
+                        <img src="images/641078032_122171743112868432_2375003023964913785_n.jpg" alt="Media Production Course" class="product-image">
+                        <span class="product-badge">Trending</span>
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Courses</div>
+                        <h3 class="product-title">Media Production with AI</h3>
+                        <p class="product-description">Learn video production, editing, and AI-powered content creation techniques.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="count">(98 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 34,999</span>
+                            <span class="price-original">Rs. 54,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="7" data-name="Media Production with AI" data-price="34999" data-image="images/641078032_122171743112868432_2375003023964913785_n.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="design">
+                    <div class="product-image-wrapper">
+                        <img src="images/640313801_122171817008868432_5717819675186418139_n.jpg" alt="Brand Identity Package" class="product-image">
+                        <div class="product-wishlist"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Design</div>
+                        <h3 class="product-title">Complete Brand Identity Package</h3>
+                        <p class="product-description">Logo, business cards, letterhead, social media kit, and brand guidelines.</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="count">(67 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">Rs. 39,999</span>
+                            <span class="price-original">Rs. 59,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-to-cart" data-id="8" data-name="Complete Brand Identity Package" data-price="39999" data-image="images/640313801_122171817008868432_5717819675186418139_n.jpg">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs. 0</span>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">
+                <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>DigiTech <span class="highlight">Transformation</span></span>
+                    </a>
+                    <p>Empowering the next generation of digital entrepreneurs and professionals.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100064065330176" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@JunaidUlHaqueSheikh-g3z" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@junaid.ul.haque.s65" target="_blank" rel="noopener" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio" target="_blank" rel="noopener" class="social-link"><i class="fab fa-fiverr"></i></a>
+                        <a href="https://www.facebook.com/groups/958910999994384" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html">Web Development with Python</a></li>
+                        <li><a href="programs.html">Media Production with AI</a></li>
+                        <li><a href="programs.html">Computer Graphics &amp; Video Editing</a></li>
+                        <li><a href="programs.html">Speech Language Pathology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Shaheed Makdhoom Bilawal Society, Near Safoora Chowrangi, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 335 9033554 / +92 334 3046525</li>
+                        <li><i class="fas fa-phone"></i> +92 332 3605926 / +92 332 0213589</li>
+                        <li><i class="fas fa-envelope"></i> digitechtransformation@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DigiTech Transformation. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/923359033554" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Shopping Cart Functionality
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // DOM Elements
+        const cartIcon = document.getElementById('cartIcon');
+        const cartSidebar = document.getElementById('cartSidebar');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const cartClose = document.getElementById('cartClose');
+        const cartItems = document.getElementById('cartItems');
+        const cartCount = document.getElementById('cartCount');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const toast = document.getElementById('toast');
+
+        // Initialize
+        updateCart();
+
+        // Cart Toggle
+        cartIcon.addEventListener('click', () => {
+            cartSidebar.classList.add('active');
+            cartOverlay.classList.add('active');
+        });
+
+        cartClose.addEventListener('click', closeCart);
+        cartOverlay.addEventListener('click', closeCart);
+
+        function closeCart() {
+            cartSidebar.classList.remove('active');
+            cartOverlay.classList.remove('active');
+        }
+
+        // Add to Cart
+        document.querySelectorAll('.btn-add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.dataset.id;
+                const name = this.dataset.name;
+                const price = parseInt(this.dataset.price);
+                const image = this.dataset.image;
+
+                const existingItem = cart.find(item => item.id === id);
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push({ id, name, price, image, quantity: 1 });
+                }
+
+                saveCart();
+                updateCart();
+                showToast('Product added to cart!', 'success');
+            });
+        });
+
+        // Update Cart Display
+        function updateCart() {
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">${item.name}</div>
+                            <div class="cart-item-price">Rs. ${item.price.toLocaleString()}</div>
+                            <div class="cart-item-quantity">
+                                <button class="qty-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="qty-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-remove" onclick="removeItem('${item.id}')">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotal.textContent = `Rs. ${total.toLocaleString()}`;
+        }
+
+        // Update Quantity
+        function updateQuantity(id, change) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(item => item.id !== id);
+                }
+                saveCart();
+                updateCart();
+            }
+        }
+
+        // Remove Item
+        function removeItem(id) {
+            cart = cart.filter(item => item.id !== id);
+            saveCart();
+            updateCart();
+            showToast('Item removed from cart');
+        }
+
+        // Save Cart
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // Show Toast
+        function showToast(message, type = '') {
+            toast.textContent = message;
+            toast.className = 'toast show ' + type;
+            setTimeout(() => {
+                toast.className = 'toast';
+            }, 3000);
+        }
+
+        // Checkout via WhatsApp
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                showToast('Your cart is empty!');
+                return;
+            }
+
+            let message = 'Hello! I would like to order:\n\n';
+            cart.forEach(item => {
+                message += `- ${item.name} x${item.quantity} = Rs. ${(item.price * item.quantity).toLocaleString()}\n`;
+            });
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            message += `\nTotal: Rs. ${total.toLocaleString()}`;
+            message += '\n\nPlease confirm my order.';
+
+            const whatsappUrl = `https://wa.me/923359033554?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Filter Products
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Wishlist Toggle
+        document.querySelectorAll('.product-wishlist').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                if (this.classList.contains('active')) {
+                    this.innerHTML = '<i class="fas fa-heart"></i>';
+                    showToast('Added to wishlist!');
+                } else {
+                    this.innerHTML = '<i class="far fa-heart"></i>';
+                    showToast('Removed from wishlist');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

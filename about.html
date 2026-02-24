@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DigiTech Transformation</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-section {
+            padding: 5rem 0;
+        }
+
+        .about-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-image-box {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image-box img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .mission-card, .vision-card {
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            color: white;
+        }
+
+        .vision-card {
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+            color: white;
+        }
+
+        .mission-card h3, .vision-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card p, .vision-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .stats-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-box {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .team-section {
+            padding: 5rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid #2563eb;
+        }
+
+        .team-card h3 {
+            font-size: 1.3rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .back-to-home {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .back-to-home .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .about-content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image-box img {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>DigiTech <span class="highlight">Transformation</span></span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="counselling.html">Counselling</a></li>
+                <li><a href="digital-marketing-agency.html">Digital Marketing Agency</a></li>
+                <li><a href="csr.html">CSR</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="index.html#contact" class="btn btn-primary">Enroll Now</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About DigiTech Transformation</h1>
+            <p>Empowering the next generation of digital entrepreneurs and professionals in Pakistan</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content-grid">
+                <div class="about-image-box">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/501253488_122114079098868432_4425891057299274538_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEZl3sRAL_coKDxq4HIvjkYX9PFxVtXny5f08XFW1efLl4go8IOugywDsG-bJWzSVk7_x_nnGTZcNH9EQiA6Wx1&_nc_ohc=11nuGUSk6qkQ7kNvwG2eD00&_nc_oc=AdkiIK7s1gx47FGiM0JqHj3JgySnPiGySD_m7J8Ut1QjirRKe_vvrn6a16LIowCvS3fQ&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=LoqfEsy8Qcu-NnMNyCK9gg&oh=00_AfupcmeNJTPjgDKnhxltmgTuE6YOB5bDrdLh1peWv2Bc5Q&oe=69A20CA5" alt="DigiTech Transformation Team">
+                </div>
+                <div class="about-text">
+                    <h2>Transforming Lives Through Digital Education</h2>
+                    <p>DigiTech Transformation is Pakistan's leading digital skills platform, dedicated to empowering individuals with industry-ready skills in e-commerce, digital marketing, creative arts, and emerging technologies.</p>
+                    <p>Since our inception, we have trained over 50,000+ students, helping them launch successful careers as freelancers, entrepreneurs, and industry professionals. Our comprehensive programs combine theoretical knowledge with hands-on practical experience.</p>
+                    <p>Located in the heart of Karachi at Jofa Tower, Main University Road, we provide state-of-the-art facilities including coworking spaces, modern classrooms, and direct mentorship from industry experts.</p>
+                    <a href="index.html#programs" class="btn btn-primary btn-lg">Explore Our Programs</a>
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>To democratize digital education in Pakistan by providing accessible, affordable, and industry-relevant training that empowers individuals to achieve financial independence and professional success.</p>
+                </div>
+                <div class="vision-card">
+                    <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                    <p>To become Pakistan's premier digital skills institution, creating a million skilled professionals who drive the country's digital economy and contribute to global freelancing markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Students Trained</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Startups Launched</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Placement Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Expert Mentors</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Leadership</span>
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">Industry experts dedicated to your success</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://scontent.fkhi16-2.fna.fbcdn.net/v/t39.30808-6/274926607_493297922158133_8266671877901625104_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeEODpUe1sAlGI9pwY1KpW9_wZBGNH8L4B_BkEY0fwvgH9j9ssRUkg96yUL7UV_Jiz0wPUBKRMGl53-qY4epVa34&_nc_ohc=TNLCUEhUxLoQ7kNvwHAcyQf&_nc_oc=Adn7k6oecTQGzHOpyBVLN1np4175BuPAkXY6PvLB4RuAM4pzfCug4L4DiUSSZD4mDUs&_nc_zt=23&_nc_ht=scontent.fkhi16-2.fna&_nc_gid=MXQ402zVCfupKwmxzSvf9g&oh=00_AfvKGfeECyTNLDPjxx2gSPHULD3188YmZwcvWvQxDu3QXQ&oe=69A209F1" alt="Dr. Imran Yousuf">
+                    <h3>Dr. Imran Yousuf</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://scontent.fkhi16-1.fna.fbcdn.net/v/t39.30808-6/634148804_26301211976153599_4899078462576444477_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeEiqEDMtbQICZ-XTlJgE9FnIDtGp1oN4w0gO0anWg3jDQQNpCxOvQrrTfBnJgF7Xy98ZkCiSHXUDlRM7y1YwX1b&_nc_ohc=iSIyJxdfOOIQ7kNvwGoqIw1&_nc_oc=AdkQHCHVr_iTx4MzjnEdoYF6uagxIhti9Q6sQ43gJWpFGcffABTtCqanauQv6PWuwNI&_nc_zt=23&_nc_ht=scontent.fkhi16-1.fna&_nc_gid=BA6klTeNqAvRs22iaYOfpQ&oh=00_AfuAVMmcEHa3LQJVIVnnCZ3BKZCDDzX6doCBP8lBbk4vTg&oe=69A20906" alt="Farah Sadiq Khan">
+                    <h3>Farah Sadiq Khan</h3>
+                    <p>Head of Operations</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://scontent.fkhi16-2.fna.fbcdn.net/v/t39.30808-6/640059429_122171817098868432_5178230762912461307_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHhrPPdhI3TUxnF_bZ8uVOtS5a7BXoqc0RLlrsFeipzRM37vghrjfFwvEeT54F8DQqzFnND7pN2rI2zGsDx9a2u&_nc_ohc=s1izhOM4xhwQ7kNvwFAQLFk&_nc_oc=Adng4TymjnDYYjqO-LUZ4FAuE1Uxw1VYfYFGEpEMnSCP92pCwMUdzClXwp1R-gD14QI&_nc_zt=23&_nc_ht=scontent.fkhi16-2.fna&_nc_gid=YD8CA6zf6QrMegknCny0Cw&oh=00_AfuIm2ZlloV90Xx-l4dUf1KwYnEqEtx-BxFPzp5ADWlj6Q&oe=69A22267" alt="Madam Farah Sadiq Khan">
+                    <h3>Madam Farah Sadiq Khan</h3>
+                    <p>Director of Student Success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <a href="index.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>DigiTech <span class="highlight">Transformation</span></span>
+                    </a>
+                    <p>Empowering the next generation of digital entrepreneurs and professionals.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100064065330176" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@JunaidUlHaqueSheikh-g3z" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@junaid.ul.haque.s65" target="_blank" rel="noopener" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio" target="_blank" rel="noopener" class="social-link"><i class="fab fa-fiverr"></i></a>
+                        <a href="https://www.facebook.com/groups/958910999994384" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html">Web Development with Python</a></li>
+                        <li><a href="programs.html">Media Production with AI</a></li>
+                        <li><a href="programs.html">Computer Graphics &amp; Video Editing</a></li>
+                        <li><a href="programs.html">Speech Language Pathology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Shaheed Makdhoom Bilawal Society, Near Safoora Chowrangi, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 335 9033554 / +92 334 3046525</li>
+                        <li><i class="fas fa-phone"></i> +92 332 3605926 / +92 332 0213589</li>
+                        <li><i class="fas fa-envelope"></i> digitechtransformation@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DigiTech Transformation. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/923359033554" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormSubmission();
     initAnimations();
     initCounterAnimation();
+    initShopFilter();
+    initShoppingCart();
+    initWishlist();
 });
 
 /**
@@ -465,3 +468,234 @@ document.querySelectorAll('form').forEach(form => {
 });
 
 console.log('DigiTech Transformation website loaded successfully! 🚀');
+
+/**
+ * Shop Filter Functionality
+ */
+function initShopFilter() {
+    const filterBtns = document.querySelectorAll('.shop-filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    if (!filterBtns.length || !productCards.length) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.dataset.filter;
+
+            // Filter cards
+            productCards.forEach(card => {
+                const category = card.dataset.category;
+
+                if (filter === 'all' || category === filter) {
+                    card.classList.remove('hide');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
+        });
+    });
+}
+
+/**
+ * Shopping Cart Functionality
+ */
+let cart = [];
+
+function initShoppingCart() {
+    // Load cart from localStorage
+    const savedCart = localStorage.getItem('digitechCart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCartDisplay();
+    }
+
+    // Add to cart buttons
+    const addToCartBtns = document.querySelectorAll('.btn-add-to-cart');
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const productId = this.dataset.productId;
+            const productName = this.dataset.productName;
+            const productPrice = parseFloat(this.dataset.productPrice);
+            const productImage = this.closest('.product-card').querySelector('.product-image').src;
+
+            addToCart(productId, productName, productPrice, productImage);
+        });
+    });
+
+    // Cart icon click
+    const cartIconNav = document.getElementById('cartIconNav');
+    const cartModal = document.getElementById('cartModal');
+    const cartClose = document.getElementById('cartClose');
+    const cartOverlay = document.querySelector('.cart-overlay');
+
+    if (cartIconNav) {
+        cartIconNav.addEventListener('click', openCart);
+    }
+
+    if (cartClose) {
+        cartClose.addEventListener('click', closeCart);
+    }
+
+    if (cartOverlay) {
+        cartOverlay.addEventListener('click', closeCart);
+    }
+}
+
+function addToCart(id, name, price, image) {
+    const existingItem = cart.find(item => item.id === id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            id: id,
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+        });
+    }
+
+    saveCart();
+    updateCartDisplay();
+    showNotification(`${name} added to cart!`, 'success');
+    openCart();
+}
+
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    saveCart();
+    updateCartDisplay();
+}
+
+function updateQuantity(id, change) {
+    const item = cart.find(item => item.id === id);
+    if (item) {
+        item.quantity += change;
+        if (item.quantity <= 0) {
+            removeFromCart(id);
+        } else {
+            saveCart();
+            updateCartDisplay();
+        }
+    }
+}
+
+function saveCart() {
+    localStorage.setItem('digitechCart', JSON.stringify(cart));
+}
+
+function updateCartDisplay() {
+    const cartItems = document.getElementById('cartItems');
+    const cartEmpty = document.getElementById('cartEmpty');
+    const cartFooter = document.getElementById('cartFooter');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartCount = document.getElementById('cartCount');
+
+    if (!cartItems) return;
+
+    // Update cart count
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    if (cartCount) {
+        cartCount.textContent = totalItems;
+        if (totalItems > 0) {
+            cartCount.classList.remove('hidden');
+        } else {
+            cartCount.classList.add('hidden');
+        }
+    }
+
+    // Update cart items display
+    if (cart.length === 0) {
+        cartItems.style.display = 'none';
+        cartFooter.style.display = 'none';
+        if (cartEmpty) cartEmpty.style.display = 'block';
+    } else {
+        cartItems.style.display = 'flex';
+        cartFooter.style.display = 'block';
+        if (cartEmpty) cartEmpty.style.display = 'none';
+
+        cartItems.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/80x80/4361ee/ffffff?text=Product'">
+                <div class="cart-item-details">
+                    <h4 class="cart-item-title">${item.name}</h4>
+                    <p class="cart-item-price">Rs. ${item.price.toLocaleString()} x ${item.quantity}</p>
+                </div>
+                <button class="cart-item-remove" onclick="removeFromCart('${item.id}')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        `).join('');
+
+        // Update total
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        if (cartTotal) {
+            cartTotal.textContent = `Rs. ${total.toLocaleString()}`;
+        }
+    }
+}
+
+function openCart() {
+    const cartModal = document.getElementById('cartModal');
+    if (cartModal) {
+        cartModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeCart() {
+    const cartModal = document.getElementById('cartModal');
+    if (cartModal) {
+        cartModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        showNotification('Your cart is empty!', 'error');
+        return;
+    }
+
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const message = `Hello! I would like to place an order:\n\n${cart.map(item => `- ${item.name} (x${item.quantity}): Rs. ${item.price.toLocaleString()}`).join('\n')}\n\nTotal: Rs. ${total.toLocaleString()}`;
+    
+    // Open WhatsApp with order details
+    const whatsappNumber = '923370105286';
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+
+/**
+ * Wishlist Functionality
+ */
+function initWishlist() {
+    const wishlistBtns = document.querySelectorAll('.add-to-wishlist');
+
+    wishlistBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (this.classList.contains('active')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                showNotification('Added to wishlist!', 'success');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                showNotification('Removed from wishlist', 'info');
+            }
+        });
+    });
+}
+
+// Make functions globally available
+window.removeFromCart = removeFromCart;
+window.openCart = openCart;
+window.closeCart = closeCart;
+window.checkout = checkout;

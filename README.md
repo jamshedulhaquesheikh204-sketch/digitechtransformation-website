@@ -1,21 +1,21 @@
 # DigiTech Transformation Website
 
-**Developer:** Junaid Ul Haque Sheikh
-**Contact:** +92 332 3605926 | +92 334 3046525
-**Email:** junaidsheikh0002@gmail.com
+**Developer:** Junaid Ul Haque Sheikh  
+**Contact:** +92 335 9033554 | +92 334 3046525 | +92 332 3605926  
+**Email:** digitechtransformation@gmail.com
 
-## Live Deployment Links
+## 🌐 Live Deployment Links
 
 - **Main Domain:** [https://digitechtransformation.com/](https://digitechtransformation.com/)
-- **Vercel:** [https://digitechtransformation.vercel.app](https://digitechtransformation.vercel.app)
-- **Netlify:** [https://digitechtransformation.netlify.app](https://digitechtransformation.netlify.app)
+- **Vercel:** [https://digitechtransformation-junaid-ul-haque-sheikh-0001.vercel.app](https://digitechtransformation-junaid-ul-haque-sheikh-0001.vercel.app)
+- **Netlify:** [https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app](https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app)
 - **GitHub:** [https://github.com/junaidsheikh0002/junaidulhaquesheikh0001](https://github.com/junaidsheikh0002/junaidulhaquesheikh0001)
 
 ---
 
 A modern, responsive e-commerce enabled website for DigiTech Transformation - Pakistan's leading digital skills institute.
 
-## Features
+## ✨ Features
 
 - 🎨 **Modern UI/UX** - Beautiful gradient design with smooth animations
 - 🛒 **E-commerce Functionality** - Full shopping cart with Add to Cart feature
@@ -25,8 +25,9 @@ A modern, responsive e-commerce enabled website for DigiTech Transformation - Pa
 - 📊 **Dynamic Statistics** - Animated counter for impact stats
 - ✉️ **Contact Form** - Lead generation form
 - 🧭 **Smooth Navigation** - Sticky navbar with smooth scrolling
+- ❤️ **Wishlist** - Save favorite products
 
-## Products/Shop Section
+## 🛒 Products/Shop Section
 
 The website includes a fully functional e-commerce section with:
 - 6 Digital Products with images
@@ -36,14 +37,41 @@ The website includes a fully functional e-commerce section with:
 - Shopping cart modal
 - WhatsApp checkout integration
 
-## Contact Information
+### Available Products:
+1. **Professional E-commerce Website Package** - Rs. 49,999
+2. **Digital Marketing Service Package** - Rs. 29,999
+3. **Complete Web Development Course** - Rs. 19,999
+4. **Professional Logo Design Package** - Rs. 9,999
+5. **SEO Optimization Service** - Rs. 24,999
+6. **Graphic Design Masterclass** - Rs. 14,999
 
-- **Name:** Junaid Ul Haque Sheikh
-- **WhatsApp:** +92 332 3605926 / +92 334 3046525
-- **Email:** info@digitechtransformation.pk
-- **Location:** Karachi, Sindh, Pakistan
+## 📞 Contact Information
 
-## Quick Start
+### Junaid Ul Haque Sheikh
+**Web Developer (Intern / Trainee)**
+
+- **WhatsApp:** +92 335 9033554 / +92 334 3046525
+- **Phone:** +92 332 3605926 / +92 332 0213589
+- **Phone:** +92 337 2135310 / +92 336 8068664
+- **Email:** digitechtransformation@gmail.com
+- **Address:** Shaheed Makdhoom Bilawal Society, Near Safoora Chowrangi, Karachi, Pakistan
+
+## 🔗 Social Media Links
+
+- **Facebook:** [https://www.facebook.com/profile.php?id=100064065330176](https://www.facebook.com/profile.php?id=100064065330176)
+- **YouTube:** [https://www.youtube.com/@JunaidUlHaqueSheikh-g3z](https://www.youtube.com/@JunaidUlHaqueSheikh-g3z)
+- **TikTok:** [https://www.tiktok.com/@junaid.ul.haque.s65](https://www.tiktok.com/@junaid.ul.haque.s65)
+- **Fiverr:** [https://www.fiverr.com/users/junaidsheikh000/portfolio](https://www.fiverr.com/users/junaidsheikh000/portfolio)
+- **Facebook Group:** [https://www.facebook.com/groups/958910999994384](https://www.facebook.com/groups/958910999994384)
+
+## 📚 Programs Offered
+
+1. **Cohort 1: Web Development with Python (AI Technologies)** - 12 Weeks
+2. **Cohort 1: Media Production with AI Technologies** - 6 Months (3 Months Coursework + 3 Months Internship)
+3. **Cohort 1: Computer Graphics & Video Editing Course with AI Technologies** - 6 Months
+4. **Cohort 2: Speech Language Pathology (SLP) with International Certification** - 3 Months
+
+## 🚀 Quick Start
 
 ### Local Development
 
@@ -52,21 +80,21 @@ The website includes a fully functional e-commerce section with:
    ```bash
    # Using Python
    python -m http.server 8000
-   
+
    # Using Node.js (npx)
    npx serve .
-   
+
    # Using PHP
    php -S localhost:8000
    ```
 
 3. Visit `http://localhost:8000`
 
-## Deployment Instructions
+## 📦 Deployment Instructions
 
 ### Option 1: Deploy to Vercel
 
-**URL:** https://digitechtransformation.vercel.app
+**URL:** https://digitechtransformation-junaid-ul-haque-sheikh-0001.vercel.app
 
 #### Method A: Vercel Dashboard (Recommended)
 
@@ -76,7 +104,7 @@ The website includes a fully functional e-commerce section with:
 4. Import your GitHub repository
 5. Vercel will auto-detect the static site configuration
 6. Click "Deploy"
-7. Your site will be live at: `https://digitechtransformation.vercel.app`
+7. Your site will be live at: `https://digitechtransformation-junaid-ul-haque-sheikh-0001.vercel.app`
 
 #### Method B: Vercel CLI
 
@@ -90,14 +118,6 @@ cd D:\Digitech_Transformation_Websites_0001
 # Deploy
 vercel
 
-# Follow the prompts:
-# - Set up and deploy? Y
-# - Which scope? (select your account)
-# - Link to existing project? N
-# - Project name? digitechtransformation
-# - Directory? ./
-# - Override settings? N
-
 # Deploy to production
 vercel --prod
 ```
@@ -107,16 +127,13 @@ vercel --prod
 1. Go to your project on Vercel Dashboard
 2. Navigate to "Settings" > "Domains"
 3. Add your domain: `digitechtransformation.com`
-4. Update DNS records as instructed:
-   - Type: `A` or `CNAME`
-   - Name: `@` or `www`
-   - Value: (provided by Vercel)
+4. Update DNS records as instructed
 
 ---
 
 ### Option 2: Deploy to Netlify
 
-**URL:** https://digitechtransformation.netlify.app
+**URL:** https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app
 
 #### Method A: Netlify Dashboard (Recommended)
 
@@ -126,7 +143,7 @@ vercel --prod
 4. Connect to GitHub and select your repository
 5. Netlify will auto-detect the `netlify.toml` configuration
 6. Click "Deploy site"
-7. Your site will be live at: `https://digitechtransformation.netlify.app`
+7. Your site will be live at: `https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app`
 
 #### Method B: Netlify CLI
 
@@ -147,25 +164,13 @@ netlify deploy
 netlify deploy --prod
 ```
 
-#### Method C: Drag & Drop (Simplest)
-
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Drag and drop your project folder
-3. Your site will be deployed instantly!
-
 #### Custom Domain on Netlify
 
 1. Go to your site on Netlify Dashboard
 2. Navigate to "Domain settings"
 3. Click "Add custom domain"
 4. Enter: `digitechtransformation.com`
-5. Update DNS records:
-   - Type: `A`
-   - Name: `@`
-   - Value: `75.2.60.5` (Netlify's load balancer)
-   - Type: `CNAME`
-   - Name: `www`
-   - Value: `digitechtransformation.netlify.app`
+5. Update DNS records
 
 ---
 
@@ -183,69 +188,53 @@ netlify deploy --prod
 1. Upload all files to your web hosting via FTP/cPanel
 2. Files to upload:
    - `index.html`
-   - `styles.css` (if separate)
-   - `script.js` (if separate)
+   - `style.css`
+   - `script.js`
    - `images/` folder
-   - `vercel.json` or `netlify.toml` (not required but good practice)
+   - Other HTML files (about.html, programs.html, gallery.html)
 
-## File Structure
+## 📁 File Structure
 
 ```
 Digitech_Transformation_Websites_0001/
-├── index.html              # Main HTML file with all sections
-├── styles.css              # External CSS (if needed)
-├── script.js               # External JavaScript (if needed)
+├── index.html              # Main HTML file with all sections including shop
+├── about.html              # About page
+├── programs.html           # Programs listing
+├── gallery.html            # Gallery with product images
+├── style.css               # Main stylesheet with e-commerce styles
+├── script.js               # JavaScript with cart functionality
 ├── vercel.json             # Vercel deployment config
 ├── netlify.toml            # Netlify deployment config
 ├── README.md               # This file
 └── images/
-    ├── 635744251_...jpg    # Product images
-    ├── 636098075_...jpg
-    ├── 636669470_...jpg
-    ├── 637417452_...jpg
-    ├── 638035858_...jpg
-    └── 635744251_... (1).jpg
+    ├── *.jpg               # Product and gallery images
+    └── *.png
 ```
 
-## Website Sections
+## 🛒 Shopping Cart Features
 
-1. **Navigation** - Sticky header with cart icon
-2. **Hero** - Main banner with CTA buttons
-3. **About** - Mission, vision, and promise
-4. **Programs** - Course listings with filter
-5. **Shop** - E-commerce products section ⭐ NEW
-6. **Incubation** - Business incubation timeline
-7. **Why Choose Us** - Features and benefits
-8. **Career Support** - Student support services
-9. **Target Audience** - Who we serve
-10. **Impact** - Statistics and testimonials
-11. **Testimonials** - Success stories slider
-12. **CTA** - Call to action section
-13. **Contact** - Contact form and info
-14. **Footer** - Links and contact details
+- ✅ Add products to cart
+- ✅ View cart in slide-out modal
+- ✅ Update quantities
+- ✅ Remove items
+- ✅ Real-time total calculation
+- ✅ Checkout via WhatsApp with order details
+- ✅ Cart count badge in navigation
+- ✅ Persistent cart (localStorage)
+- ✅ Wishlist functionality
 
-## Shopping Cart Features ⭐ NEW
-
-- Add products to cart
-- View cart in slide-out modal
-- Update quantities
-- Remove items
-- Real-time total calculation
-- Checkout via WhatsApp with order details
-- Cart count badge in navigation
-
-## WhatsApp Integration
+## 💬 WhatsApp Integration
 
 The website integrates with WhatsApp for:
 - Quick contact via floating WhatsApp button
 - Checkout orders directly through WhatsApp
 - Pre-filled order messages with cart details
 
-WhatsApp Numbers:
-- Primary: +92 332 3605926
+### WhatsApp Numbers:
+- Primary: +92 335 9033554
 - Secondary: +92 334 3046525
 
-## Browser Support
+## 🌐 Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
@@ -253,45 +242,50 @@ WhatsApp Numbers:
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## Technologies Used
+## 🛠 Technologies Used
 
 - HTML5
 - CSS3 (with CSS Variables)
 - JavaScript (ES6+)
-- Font Awesome Icons
+- Font Awesome Icons (v6)
 - Google Fonts (Poppins)
 
-## Customization
+## 🎨 Customization
 
 ### Update Products
 
-Edit the product cards in `index.html` (search for `<!-- shop/e-commerce -->` section):
+Edit the product cards in `index.html` (search for `<!-- E-commerce Shop Section -->`):
 
 ```html
-<div class="product-card">
-    <div class="product-image">
-        <img src="images/your-image.jpg" alt="Product Name">
-        <div class="product-overlay">
-            <button class="btn btn-primary btn-sm add-to-cart" 
-                    data-product="Product Name" 
-                    data-price="99.99" 
-                    data-image="images/your-image.jpg">
-                <i class="fas fa-cart-plus"></i> Add to Cart
-            </button>
-        </div>
+<div class="product-card" data-category="digital">
+    <div class="product-image-wrapper">
+        <img src="your-image.jpg" alt="Product Name" class="product-image">
     </div>
-    <!-- ... product info ... -->
+    <div class="product-info">
+        <h3 class="product-title">Product Name</h3>
+        <p class="product-description">Description</p>
+        <div class="product-price">
+            <span class="price-current">Rs. 9,999</span>
+        </div>
+        <button class="btn btn-primary btn-add-to-cart" 
+                data-product-id="1" 
+                data-product-name="Product Name" 
+                data-product-price="9999">
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+    </div>
 </div>
 ```
 
 ### Update Contact Information
 
-Search and replace in `index.html`:
+Search and replace in `index.html`, `gallery.html`, and other files:
 - Phone numbers
 - Email address
 - Social media links
+- Address
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 ### Images not loading?
 - Check image paths are correct
@@ -308,16 +302,24 @@ Search and replace in `index.html`:
 - Verify configuration files (`vercel.json`, `netlify.toml`)
 - Check deployment logs on the platform
 
-## License
+## 📄 License
 
-© 2024 DigiTech Transformation. All rights reserved.
+© 2026 DigiTech Transformation. All rights reserved.
 
-## Support
+## 📞 Support
 
 For questions or support, contact:
-- WhatsApp: +92 332 3605926 / +92 334 3046525
-- Email: info@digitechtransformation.pk
+
+**Junaid Ul Haque Sheikh**  
+Web Developer (Intern / Trainee)
+
+- **WhatsApp:** +92 335 9033554 / +92 334 3046525
+- **Phone:** +92 332 3605926 / +92 332 0213589 / +92 337 2135310 / +92 336 8068664
+- **Email:** digitechtransformation@gmail.com
+- **Address:** Shaheed Makdhoom Bilawal Society, Near Safoora Chowrangi, Karachi, Pakistan
 
 ---
 
-**Developed with ❤️ for DigiTech Transformation**
+**Developed with ❤️ by Junaid Ul Haque Sheikh for DigiTech Transformation**
+
+🚀 **Ready to deploy!** Follow the instructions above to publish your website.

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "digitech-transformation",
+  "name": "digitech-transformation-junaid-ul-haque-sheikh-0001",
   "builds": [
     {
       "src": "*.html",
@@ -27,7 +27,19 @@
     },
     {
       "src": "/(.*)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/index",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "github": {
+    "enabled": true,
+    "silent": true
+  }
 }

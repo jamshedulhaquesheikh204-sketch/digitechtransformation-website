@@ -21,7 +21,10 @@
       "Bash(findstr:*)",
       "Bash(start:*)",
       "Bash(npx netlify deploy:*)",
-      "Bash(npx surge:*)"
+      "Bash(npx surge:*)",
+      "Bash(npx -y wrangler pages deploy:*)",
+      "Bash(timeout /t:*)",
+      "Bash(npx vercel login:*)"
     ]
   }
 }

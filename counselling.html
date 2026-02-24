@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counselling - DigiTech Transformation</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .counselling-hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .counselling-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .counselling-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .services-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .service-card-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            border-radius: 1rem;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image i {
+            font-size: 8rem;
+            color: white;
+            opacity: 0.3;
+        }
+
+        .benefits-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefits-list li {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefits-list li i {
+            color: #2563eb;
+            font-size: 1.25rem;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .counselling-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>DigiTech <span class="highlight">Transformation</span></span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="counselling.html" class="active">Counselling</a></li>
+                <li><a href="digital-marketing-agency.html">Digital Marketing Agency</a></li>
+                <li><a href="csr.html">CSR</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary">Book Session</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Counselling Hero -->
+    <section class="counselling-hero">
+        <div class="container">
+            <h1>Professional Counselling Services</h1>
+            <p>Expert guidance for your personal and professional growth</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #1e293b; margin-bottom: 1rem;">Our Counselling Services</h2>
+            <p style="text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 2rem;">We offer comprehensive counselling services to support your mental health and wellbeing</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Career Counselling</h3>
+                    <p>Get personalized guidance to choose the right career path and achieve your professional goals.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mental Health Support</h3>
+                    <p>Professional support for anxiety, depression, stress, and other mental health challenges.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Counselling</h3>
+                    <p>Strengthen family relationships and resolve conflicts with expert family therapy sessions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Student Counselling</h3>
+                    <p>Help students navigate academic pressure, peer relationships, and personal challenges.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Relationship Counselling</h3>
+                    <p>Improve communication and build healthier relationships with couples therapy.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Speech Therapy</h3>
+                    <p>Professional speech language pathology services for communication disorders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Our Counselling Services?</h2>
+                    <p>Our team of qualified and experienced counsellors provides a safe, confidential, and supportive environment for individuals, couples, and families.</p>
+                    <p>We use evidence-based approaches tailored to your unique needs, ensuring effective outcomes and lasting positive change.</p>
+                    <p>Whether you're facing personal challenges, career decisions, or relationship issues, we're here to help you navigate through difficult times and emerge stronger.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Schedule a Session</a>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">Benefits of Counselling</h2>
+            <ul class="benefits-list">
+                <li><i class="fas fa-check-circle"></i> Improved mental health and emotional wellbeing</li>
+                <li><i class="fas fa-check-circle"></i> Better coping strategies for life challenges</li>
+                <li><i class="fas fa-check-circle"></i> Enhanced self-awareness and personal growth</li>
+                <li><i class="fas fa-check-circle"></i> Stronger relationships and communication skills</li>
+                <li><i class="fas fa-check-circle"></i> Reduced stress, anxiety, and depression</li>
+                <li><i class="fas fa-check-circle"></i> Clear career direction and goal setting</li>
+                <li><i class="fas fa-check-circle"></i> Increased confidence and self-esteem</li>
+                <li><i class="fas fa-check-circle"></i> Professional guidance from certified counsellors</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="margin-bottom: 1rem;">Ready to Start Your Journey?</h2>
+            <p style="margin-bottom: 2rem; opacity: 0.9;">Book a confidential session with our expert counsellors today</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>DigiTech <span class="highlight">Transformation</span></span>
+                    </a>
+                    <p>Empowering the next generation of digital entrepreneurs and professionals.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100064065330176" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@JunaidUlHaqueSheikh-g3z" target="_blank" rel="noopener" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@junaid.ul.haque.s65" target="_blank" rel="noopener" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio" target="_blank" rel="noopener" class="social-link"><i class="fab fa-fiverr"></i></a>
+                        <a href="https://www.facebook.com/groups/958910999994384" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="incubation.html">Incubation</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html">Web Development with Python</a></li>
+                        <li><a href="programs.html">Media Production with AI</a></li>
+                        <li><a href="programs.html">Computer Graphics & Video Editing</a></li>
+                        <li><a href="programs.html">Speech Language Pathology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Shaheed Makdhoom Bilawal Society, Near Safoora Chowrangi, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 335 9033554 / +92 334 3046525</li>
+                        <li><i class="fas fa-phone"></i> +92 332 3605926 / +92 332 0213589</li>
+                        <li><i class="fas fa-phone"></i> +92 337 2135310 / +92 336 8068664</li>
+                        <li><i class="fas fa-envelope"></i> digitechtransformation@gmail.com</li>
+                        <li><i class="far fa-clock"></i> Mon-Sat: 9AM - 8PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DigiTech Transformation. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/923359033554" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
