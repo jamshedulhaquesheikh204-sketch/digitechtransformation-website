@@ -7,15 +7,16 @@
 ## 🌐 Live Deployment Links
 
 - **Main Domain:** [https://digitechtransformation.com/](https://digitechtransformation.com/)
-- **Vercel:** [https://digitechtransformation-junaid-ul-haque-sheikh-0001.vercel.app](https://digitechtransformation-junaid-ul-haque-sheikh-0001.vercel.app)
-- **Netlify:** [https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app](https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app)
-- **GitHub:** [https://github.com/junaidsheikh0002/junaidulhaquesheikh0001](https://github.com/junaidsheikh0002/junaidulhaquesheikh0001)
+- **Vercel (Jofa Tower):** [https://digitech-transformation-jofa-tower-live-projects-0001.vercel.app](https://digitech-transformation-jofa-tower-live-projects-0001.vercel.app)
+- **Netlify (Jofa Tower):** [https://digitech-transformation-jofa-tower-live-projects-0001.netlify.app](https://digitech-transformation-jofa-tower-live-projects-0001.netlify.app)
+- **GitHub:** [https://github.com/jamshedulhaquesheikh204-sketch/digitechtransformation-website](https://github.com/jamshedulhaquesheikh204-sketch/digitechtransformation-website)
 
 ## 📚 Assignment Pages
 
 - **Assignment 0002 - Rain On Me Perfume Ad:** [rain-on-me-ad.html](rain-on-me-ad.html)
   - 50% OFF on Formal Perfumes
   - Contact: 0335-9033554 / 0334-3046525
+  - **Direct Link:** https://digitech-transformation-jofa-tower-live-projects-0001.vercel.app/rain-on-me-ad.html
 
 ---
 
