@@ -2,3 +2,8 @@
 
 # Local Netlify folder
 .netlify
+
+# Windows system files
+nul
+desktop.ini
+Thumbs.db
