@@ -11,6 +11,12 @@
 - **Netlify:** [https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app](https://digitechtransformation-junaid-ul-haque-sheikh-0001.netlify.app)
 - **GitHub:** [https://github.com/junaidsheikh0002/junaidulhaquesheikh0001](https://github.com/junaidsheikh0002/junaidulhaquesheikh0001)
 
+## 📚 Assignment Pages
+
+- **Assignment 0002 - Rain On Me Perfume Ad:** [rain-on-me-ad.html](rain-on-me-ad.html)
+  - 50% OFF on Formal Perfumes
+  - Contact: 0335-9033554 / 0334-3046525
+
 ---
 
 A modern, responsive e-commerce enabled website for DigiTech Transformation - Pakistan's leading digital skills institute.
