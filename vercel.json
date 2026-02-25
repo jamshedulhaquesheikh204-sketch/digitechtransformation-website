@@ -1,24 +1,7 @@
 {
   "version": 2,
   "name": "digitech-transformation-jofa-tower-live-projects-0001",
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "images/**",
-      "use": "@vercel/static"
-    }
-  ],
+  "builds": [],
   "routes": [
     {
       "src": "/images/(.*)",
